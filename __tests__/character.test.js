@@ -58,9 +58,20 @@ describe('Character', () => {
 
     const myChar = new Character('astromorph');
 
-    expect(myChar.attack()).toBeGreaterThanOrEqual(1);
-    expect(myChar.attack()).toBeLessThanOrEqual(20);
+    expect(myChar.attack()).toBe(('hit' || 'critical hit') || ('miss' || 'critical miss'));
 
+  });
+
+  test('should correctly determine damage based on number rolled', () => {
+
+    const myChar = new Character('astromorph');
+    expect(myChar.attack()).toBe(('hit' || 'critical hit') || ('miss' || 'critical miss'));
+
+  });
+
+  test('should correcly indicate whether or not an attack hits', () => {
+    const myChar = new Character('astromorph');
+    expect(myChar.attack()).toBe(('hit' || 'critical hit') || ('miss' || 'critical miss'));
   });
 
 });
