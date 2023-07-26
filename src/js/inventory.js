@@ -8,21 +8,21 @@ export default class Inventory {
       this.loot[item.name] = item;
       this.loot[item.name].amount = 1;
     }
-
-    findItem(itemName){
-      if (this.bag[itemName]) {
-        return true;
-      }
-      return false;
+  }
+  findItem(itemName) {
+    if (this.bag[itemName]) {
+      return true;
     }
+    return false;
+  }
 
-    useItem(itemName) {
-      if (this.findItem(itemName)) {
-        this[item.effect](); // apply item effect
-        item.amount--;
-        if (item.amount === 0) {
-          this.dropItem(itemName);
-        }
+  useItem(itemName) {
+    if (this.findItem(itemName)) {
+      this[item.effect](); // apply item effect
+      item.amount--;
+      if (item.amount === 0) {
+        this.dropItem(itemName);
       }
     }
   }
+}

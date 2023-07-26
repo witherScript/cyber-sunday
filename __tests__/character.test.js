@@ -1,7 +1,7 @@
 import Character from '../src/js/character.js';
 
 describe('Character', () => {
-
+  //constructor: creates object with property, methods
   test('A warrior should have 150 health and 100 stamina and 15 attack', () => {
 
     const myWarrior = new Character('warrior');
